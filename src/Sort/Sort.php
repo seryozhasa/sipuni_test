@@ -10,6 +10,10 @@ namespace App\Sort;
  */
 class Sort implements SortInterface
 {
+    /**
+     * @param string $string
+     * @return string
+     */
     public function sort(string $string): string
     {
         $words = \explode(' ', $string);
@@ -21,6 +25,10 @@ class Sort implements SortInterface
         return \implode(' ', $result);
     }
 
+    /**
+     * @param string $word
+     * @return string
+     */
     private function sortWord(string $word): string
     {
         $letters = $this->wordToLetters($word);
